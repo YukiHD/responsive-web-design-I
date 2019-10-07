@@ -178,7 +178,13 @@ h2 {
 .nav-bar a {
   text-decoration: none;
   color: grey;
-  margin-right: 55px;
+}
+
+ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 75%;
 }
 
 .nav-bar a:hover {
@@ -276,11 +282,16 @@ footer {
 
   .nav-menu {
     flex-flow: column-reverse;
+    flex-wrap: nowrap;
   }
 
   .nav-bar {
     width: 100%;
     margin: 40px 0 20px 0;
+  }
+
+  ul {
+    width: 100%;
   }
 
   .nav-logo {
