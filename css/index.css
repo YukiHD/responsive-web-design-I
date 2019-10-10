@@ -1,3 +1,389 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+body {
+  /* overflow-x: hidden; */
+}
+
+nav {
+  margin: 30px 0px;
+}
+
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar {
+  width: 75%;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: grey;
+}
+
+ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.nav-bar a:hover {
+  color: midnightblue;
+}
+
+.nav-logo {
+  width: 25%;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-text {
+  width: 49%;
+  text-align: center;
+  margin: 10% 0;
+}
+
+.header-text p {
+  font-size: 70px;
+}
+
+.header-text button {
+  cursor: pointer;
+  background-color: white;
+  padding: 5px 30px;
+}
+
+.header-text button:hover {
+  background-color: midnightblue;
+  font-weight: bolder;
+  color: white;
+}
+
+.header-img {
+  width: 49%;
+  text-align: right;
+  margin: 5% 0;
+}
+
+.main-first {
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.features {
+  width: 49%;
+}
+
+.about {
+  width: 49%;
+}
+
+.main-second {
+  margin: 40px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.services {
+  width: 32%;
+}
+
+.product {
+  width: 32%;
+}
+
+.vision {
+  width: 32%;
+}
+
+address {
+  margin: 40px 0px;
+}
+
+footer {
+  margin: 20px 0px;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 800px) {
+  .container {
+    max-width: 880px;
+    width: 90%;
+  }
+
+  nav {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+
+  .nav-menu {
+    flex-flow: column-reverse;
+    flex-wrap: nowrap;
+  }
+
+  .nav-bar {
+    width: 100%;
+    margin: 40px 0 20px 0;
+  }
+
+  ul {
+    width: 100%;
+  }
+
+  .nav-logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-img {
+    display: none;
+  }
+
+  .header-text {
+    width: 100%;
+    margin: 5% 0;
+  }
+
+  .middle-img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+
+  nav {
+    margin-bottom: 0px;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  li {
+    height: 50px;
+    border-top: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li:last-child {
+    border-bottom: 1px solid grey;
+  }
+
+  li a {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  li a:hover {
+    background: grey;
+  }
+
+  .header-content {
+    justify-content: center;
+  }
+
+  .header-text {
+    text-align: center;
+  }
+
+  .main-first {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .about,
+  .features {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .main-img {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-second {
+    flex-direction: column;
+  }
+
+  .services,
+  .product,
+  .vision {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+}
